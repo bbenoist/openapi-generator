@@ -1,0 +1,22 @@
+openapi: 3.0.3
+info:
+  title: Title
+  version: "1"
+paths:
+  /test:
+    get:
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: string
+      security:
+        - access-token: []
+components:
+  securitySchemes:
+    access-token:
+      scheme: bearer
+      bearerFormat: JWT
+      type: http
